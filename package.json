@@ -1,31 +1,27 @@
 {
     "name": "gatsby-remark-embed-url",
     "description": "Gatsby plugin to embed script output",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "author": "Nicu Reut <contact@nicu.dev>",
     "repository": {
         "type": "git",
         "url": "https://github.com/ecyshor/gatsby-remark-embed-url.git"
     },
     "dependencies": {
-        "@babel/runtime": "^7.12.5",
-        "lz-string": "^1.4.4",
-        "node-fetch": "^2.6.1",
-        "normalize-path": "^3.0.0",
-        "npm-package-arg": "^6.1.1",
-        "recursive-readdir": "^2.2.2",
-        "unist-util-map": "^1.0.5",
-        "urijs": "^1.19.2"
+        "@babel/runtime": "^7.17.2",
+        "node-fetch": "^3.2.0",
+        "unist-util-visit": "^4.1.0",
+        "mdast-util-to-string": "^3.1.0"
     },
     "devDependencies": {
-        "@babel/cli": "^7.12.1",
-        "@babel/core": "^7.12.3",
-        "babel-preset-gatsby-package": "^0.9.0-next.0",
-        "cross-env": "^7.0.2"
+        "@babel/cli": "^7.17.6",
+        "@babel/core": "^7.17.5",
+        "babel-preset-gatsby-package": "^2.8.0",
+        "cross-env": "^7.0.3"
     },
     "main": "index.js",
     "peerDependencies": {
-        "gatsby": "^2.0.0"
+        "gatsby": "^4.8.1"
     },
     "scripts": {
         "build": "babel src --out-dir . --ignore \"**/__tests__\"",
