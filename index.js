@@ -1,7 +1,5 @@
 const visit = require("unist-util-visit");
 
-const toString = require("mdast-util-to-string");
-
 const fetch = require('node-fetch');
 
 module.exports = async ({
@@ -33,14 +31,7 @@ module.exports = async ({
       value: codeUrl,
       lang: lang
     };
-    node.children = [{
-      type: "html",
-      value: `
-        <p style="color: rebeccapurple;font-style: italic;font-weight: lighter; margin-bottom:0;margin-top:0">
-          Embedded from <a href='${sourceUrl}'>${sourceUrl}</a>
-        </p>
-      `
-    }, codeNode, {
+    node.children = [codeNode, {
       type: "html",
       value: `
         <p style="color: rebeccapurple;font-style: italic;font-weight: lighter; margin-top:0; font-size: x-small">
